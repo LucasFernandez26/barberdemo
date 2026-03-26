@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Barbería El Corto - Reserva tu turno</title>
+  <!-- Fuentes modernas -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Cabecera -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="logo" aria-label="Barbería El Corto">
+        <span class="logo-icon" aria-hidden="true">✂️</span>
+        Barbería El Corto
+      </div>
+      <nav class="nav" aria-label="Navegación principal">
+        <a href="#reserva">Reserva</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#ubicacion">Ubicación</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero container">
+    <div class="hero-content">
+      <h1>Estilo, precisión y experiencia en cada corte</h1>
+      <p>Reserva tu turno de forma rápida. Horario: martes a domingo de 8:00 a 20:00.</p>
+      <a href="#reserva" class="btn btn.primary">Reservar ahora</a>
+    </div>
+  </section>
+
+  <!-- Servicios -->
+  <section id="servicios" class="container section">
+    <h2 class="section-title">Servicios</h2>
+    <div class="grid cards">
+      <div class="card-service">
+        <div class="icon" aria-hidden="true">✂️</div>
+        <h3>Corte de pelo</h3>
+        <p>Estilo moderno, con precisión y detalle.</p>
+      </div>
+      <div class="card-service">
+        <div class="icon" aria-hidden="true">🪒</div>
+        <h3>Afeitado tradicional</h3>
+        <p>Experiencia clásica con acabado perfecto.</p>
+      </div>
+      <div class="card-service">
+        <div class="icon" aria-hidden="true">🧔</div>
+        <h3>Barba y bigote</h3>
+        <p>Rasurado, definición y forma personalizada.</p>
+      </div>
+      <div class="card-service">
+        <div class="icon" aria-hidden="true">🔧</div>
+        <h3>Contorno y retoque</h3>
+        <p>Detalles para un look pulido.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reserva (con diseño moderno) -->
+  <section id="reserva" class="container section reservation-area">
+    <h2 class="section-title">Reserva tu turno</h2>
+
+    <div class="grid two-col">
+      <!-- Formulario de reserva -->
+      <form id="formReserva" class="card form-card" autocomplete="off" aria-describedby="instrucciones">
+        <div class="field">
+          <input type="text" id="nombre" name="nombre" required placeholder=" " />
+          <label for="nombre">Nombre</label>
+        </div>
+
+        <div class="field">
+          <input type="tel" id="telefono" name="telefono" required placeholder=" " />
+          <label for="telefono">Teléfono</label>
+        </div>
+
+        <div class="field">
+          <input type="date" id="dia" name="dia" required placeholder=" " />
+          <label for="dia">Día</label>
+        </div>
+
+        <div class="field">
+          <select id="hora" name="hora" required>
+            <option value="" disabled selected>Selecciona hora</option>
+          </select>
+          <label for="hora" class="select-label">Hora</label>
+        </div>
+
+        <div class="field">
+          <select id="servicio" name="servicio" required>
+            <option value="corte">Corte de pelo</option>
+            <option value="afeitado">Afeitado tradicional</option>
+            <option value="barba">Barba y bigote</option>
+            <option value="contorno">Contorno y retoque</option>
+          </select>
+          <label for="servicio" class="select-label">Servicio</label>
+        </div>
+
+        <button type="submit" class="btn primary-btn">Reservar y abrir WhatsApp</button>
+
+        <div class="instrucciones" id="instrucciones" aria-live="polite"></div>
+      </form>
+
+      <!-- Panel de info + mapa (pequeño mapa) -->
+      <aside class="card info-card" aria-label="Horarios y ubicación">
+        <h3>Horario</h3>
+        <p>Martes a Domingo: 08:00 - 20:00</p>
+
+        <h3>Ubicación</h3>
+        <p>Calle Ejemplo 123, Ciudad</p>
+        <div class="map-wrap">
+          <!-- Mapa embebido (puedes reemplazar por tu dirección) -->
+          <iframe
+            src="https://www.google.com/maps?q=Calle+Ejemplo+123,Ciudad&output=embed"
+            title="Mapa de la barbería"
+            width="100%" height="180" style="border:0;" allowfullscreen="" loading="lazy">
+          </iframe>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- Ubicación (versión ampliada) -->
+  <section id="ubicacion" class="container section map-section" aria-label="Ubicación ampliada">
+    <h2 class="section-title">Ubicación detallada</h2>
+    <div class="map-container">
+      <iframe
+        src="https://www.google.com/maps?q=Calle+Ejemplo+123, Ciudad&output=embed"
+        title="Mapa ampliado"
+        width="100%" height="360" style="border:0;" allowfullscreen="" loading="lazy">
+      </iframe>
+    </div>
+  </section>
+
+  <!-- Contacto -->
+  <section id="contacto" class="container section contact-section" aria-label="Contacto">
+    <h2 class="section-title">Contacto</h2>
+    <p>Teléfono: +34 123 456 789</p>
+    <p>Horarios: martes a domingo 8:00 - 20:00</p>
+  </section>
+
+  <!-- WhatsApp flotante (FAB) -->
+  <a id="wa-fab" class="wa-fab" href="#" target="_blank" rel="noopener" aria-label="Abrir WhatsApp para reservar">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <path d="M3 12a9 9 0 0 0 9 9h0a9 9 0 0 0 9-9c0-4.97-4.03-9-9-9-1.9 0-3.68.59-5.15 1.59L3 9l0 3z" fill="#fff" opacity=".2"/>
+      <path d="M20.5 3a9 9 0 0 0-12.02 12.02L4 21l5.01-2.48A9 9 0 1 0 20.5 3z" fill="#fff" opacity=".12"/>
+      <path d="M8.5 12.5c-.2 0-.4-.03-.6-.1l-1.6-.6-2.1 1.1 1.1-2.2-.6-1.6a5 5 0 1 1 9.8 1.6l-1.4 1.4a2 2 0 0 1-2.2.2l-2.2-1.2a3 3 0 1 1 4.2 4.2l-1.3.9c-.3.2-.6.3-1 .3h-0z" fill="#25D366"/>
+    </svg>
+    <span>WhatsApp</span>
+  </a>
+
+  <footer class="container footer">
+    <p>&copy; 2026 Barbería El Corto. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
